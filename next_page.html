@@ -22,5 +22,18 @@
         }
     }
     req.send()
+        let req2 = new XMLHttpRequest()
+
+    req.open('GET', 'audio.wav', true)
+
+    req2.onload = () => {
+        // console.log('?')
+        if(req2.status >= 200 && req2.status < 300) {
+            console.log('ok reequest')
+        } else {
+            console.log('not okay')
+        }
+    }
+    req2.send()
 </script>
 </html>
